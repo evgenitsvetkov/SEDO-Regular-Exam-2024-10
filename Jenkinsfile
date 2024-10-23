@@ -10,7 +10,7 @@ pipeline{
             }
         stage('Build project'){
             steps{
-                bat 'dotnet build'
+                bat 'dotnet build --no-restore'
             }
         }
         stage('Execute tests') {
